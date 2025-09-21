@@ -1,6 +1,28 @@
 # keras-with-image-classification
 📌 Image Classification with Keras  This project demonstrates an image classification model built using Keras (with TensorFlow backend). The goal is to train a deep learning model that can automatically recognize and classify images into predefined categories.
 ![Model Accuracy Graph](screen.png)
+![Hidden Layers](layer.pnmg)
+## 🔹 Model Architecture
+
+```python
+model = tf.keras.Sequential([
+    # Input Layer
+    # Flattens 28x28 images into a 784-dimensional vector
+    tf.keras.layers.Flatten(input_shape=[28,28]),
+
+    # Hidden Layer 1
+    # Fully connected layer with 300 neurons and ReLU activation
+    tf.keras.layers.Dense(300, activation="relu"),
+
+    # Hidden Layer 2
+    # Fully connected layer with 100 neurons and ReLU activation
+    tf.keras.layers.Dense(100, activation="relu"),
+
+    # Output Layer
+    # Fully connected layer with 10 neurons (for 10 classes)
+    # Softmax activation outputs probability distribution
+    tf.keras.layers.Dense(10, activation="softmax")
+])
 
 # 📌 Image Classification with Keras
 
