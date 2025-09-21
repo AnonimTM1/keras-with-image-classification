@@ -23,7 +23,7 @@ model = tf.keras.Sequential([
     # Softmax activation outputs probability distribution
     tf.keras.layers.Dense(10, activation="softmax")
 ])
-
+```
 # 📌 Image Classification with Keras
 
 
